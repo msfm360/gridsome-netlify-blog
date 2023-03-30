@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: gridsome-netlify-blog.git
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "static/uploads"
@@ -18,4 +18,3 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
 
-git remote add origin https://github.com/msfm360/abc.git
