@@ -16,6 +16,13 @@ module.exports = {
 
   plugins: [
     {
+      use: "gridsome-plugin-tailwindcss2",
+      options: {
+        tailwindConfigFile: './tailwind.config.js',
+        mainCssFile: './src/assets/css/main.css',
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'posts/**/*.md',

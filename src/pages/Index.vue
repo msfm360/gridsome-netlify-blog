@@ -5,7 +5,7 @@
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
 
-    <div v-for="edge in $page.allPost.edges" :key="edge.node.id">
+    <div v-for="edge in $page.allPost.edges" :key="edge.node.id" class="text-blue-400">
       <h1 :id="edge.node.id">{{ edge.node.title }}</h1>
       <h2>{{ edge.node.content }}</h2>
     </div>

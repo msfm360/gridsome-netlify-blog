@@ -12,5 +12,11 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.192"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "gridsome-plugin-tailwindcss2": "^3.0.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
   }
 }
