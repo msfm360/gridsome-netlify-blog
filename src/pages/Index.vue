@@ -6,8 +6,8 @@
 
 
     <div v-for="edge in $page.allPost.edges" :key="edge.node.id" class="text-blue-400">
-      <h1 :id="edge.node.id">{{ edge.node.title }}</h1>
-      <h2>{{ edge.node.content }}</h2>
+      <h1 :id="edge.node.id" class="text-gray-400">{{ edge.node.title }}</h1>
+      {{ edge.node.content }}
     </div>
 
     <p class="home-links">
