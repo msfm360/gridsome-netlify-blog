@@ -4,11 +4,11 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
-    <h1>Hello, world!</h1>
 
-    <p>
-      change the text
-    </p>
+    <div v-for="edge in $page.allPost.edges" :key="edge.node.id">
+      <h1 :id="edge.node.id">{{ edge.node.title }}</h1>
+      <h2>{{ edge.node.content }}</h2>
+    </div>
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -17,7 +17,19 @@
 
   </Layout>
 </template>
-
+<page-query>
+query {
+  allPost{
+    edges {
+      node {
+        content
+        title
+        id
+      }
+    }
+  }
+}
+</page-query>
 <script>
 export default {
   metaInfo: {
