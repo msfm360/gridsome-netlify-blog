@@ -9,6 +9,9 @@
       <h1 :id="edge.node.id" class="text-gray-400">{{ edge.node.title }}</h1>
       {{ edge.node.content }}
     </div>
+    <div v-for="edge in $static.allPost.edges" :key="edge.node.id" class="text-blue-400">
+      {{ edge.node.content }}
+    </div>
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -17,6 +20,17 @@
 
   </Layout>
 </template>
+<static-query>
+query {
+  allPost{
+    edges {
+      node {
+        content
+      }
+    }
+  }
+}
+</static-query>
 <page-query>
 query {
   allPost{

@@ -14,7 +14,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "string"}
+      - {label: "Post", name: "post", widget: "markdown"}
   - name: "blogs"
     label: "Blogs"
     folder: "blogs"
@@ -23,6 +23,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Post", name: "post", widget: "string"}
+
 
 
 
